@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>構成</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <style>
+        /* モーダルのスタイル */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal img {
+            max-width: 80%; /* 画像の最大幅を調整 */
+            max-height: 80%; /* 画像の最大高さを調整 */
+            width: auto;
+            height: auto;
+        }
+        /* 画像ごとのスタイル調整 */
+
+        #kare {
+            max-width: 30%; /* 画像の最大幅を調整 */
+            max-height: 30%; /* 画像の最大高さを調整 */
+        }
+
+        </style>
+</head>
+<body>
+<nav style="background-color: #cc6600;">
+  <b><a href="#"class="a">サイバー攻撃対策有効性の検証</a></b>
+     <a href="index.html">メンバー紹介</a>
+    <a href="02.html">背景</a>
+    <a href="03.html">目的</a>
+    <a href="04.html">トポロジー</a>
+    <a href="05.html">構成</a>
+    <a href="06.html">設定と攻撃手順・認証</a>
+    <a href="07.html">対策認証</a>
+    <a href="08.html">まとめ</a>
+    <a href="09.html">参考文献</a>
+</nav>
+
+    <div class="slide fade"> 
+     <h2>・＜Kali＞</h2>
+        <font size="5">
+            Kaliの役割は攻撃者の身分を模倣、使用された方法と説明は以下の通りです：<br>
+            1. NMAP TCPスキャン<br>
+              ーー NMAP TCPスキャンは、ネットワーク上のターゲットシステムのTCPポートをスキャンし、オープンしているポートやその他の情報を取得するためのツールです。<br>
+            2.NMAP UDPスキャン<br>
+              ーー NMAP UDPスキャンは、ネットワーク上のターゲットシステムのUDPポートをスキャンし、オープンしているポートやその他の情報を取得するためのツールです。 <br>                             
+            3.ポート80へのアクセス<br>
+              ーー ポート80へのアクセスは、HTTPプロトコルを使用してWebサーバーに対して通信を行うことを意味します。一般的に、WebブラウザやcurlなどのHTTPクライアントを使用して、指定されたIPアドレスやドメイン名に対してポート80にアクセスします。      <br>                          
+            4.NMAP XMASスキャン<br>
+              ーー NMAP XMASスキャンは、NMAPツールを使用してターゲットシステムのTCPポートをスキャンする手法の1つです.このスキャンは、TCPヘッダーのフラグビットを特定のパターンで設定することによって実行されます。XMASスキャンでは、TCPパケットのFIN、URG、およびPSHフラグがすべて設定された状態で送信されます。<br>      
+        </div>
+        <div class="slide fade">   
+          <h2>・＜kali＞</h2>
+            <font size="5">
+              5.NMAP FINスキャン<br>
+              ーー NMAP FINスキャンは、NMAPツールを使用してターゲットシステムのTCPポートをスキャンする手法の1つです          このスキャンは、TCPヘッダーのフラグビットのうち、FINフラグが設定された状態でTCPパケットを送信することによって実行されます。          <br>               
+            6.Netcat<br>
+              ーー Netcat（nc）は、ネットワークユーティリティであり、TCP/IPおよびUDP/IPネットワーク上でデータを読み書きするために使用されます。これは、単純なネットワークソケットを作成し、リスニングやポートスキャンなどのネットワークタスクを実行するための強力なツールです。また、データの転送やポートフォワーディング、プロトコルのテストなどの用途にも使用されます。                   <br>              
+            7.SQLインジェクション<br>
+              ーー SQLインジェクションは、Webアプリケーションやデータベースのセキュリティ上の脆弱性の一種であり、不正なSQLコードを挿入することで攻撃者がデータベースを操作                       <br>                            
+            8.DDOS（Hping3） <br>
+              ーー Hping3は、ネットワークデバッグやセキュリティ評価などの目的で使用されるコマンドラインツールです。主にTCP/IPネットワークで使用され、さまざまなネットワークパケットを生成し、送信、受信、および解析するために使用されます。<br>   
+        </div> 
+              
+        </div>          
+        <div class="slide fade">   
+          <h2>・＜SW-out＞</h2>
+            <font size="5">SW-outの役割は以下の通りです：<br>
+            ーー    ルーターとパソコンまたは機器との間の通信に使用されます。<br>
+        </div>
+        <div class="slide fade">
+        <h2>・＜RT-out＞</h2>
+        <font size="5">RT-outの役割は以下の通りです：<br>
+        ーー    ルーターにNATをデプロイし，ATを使用して変換を行うことは、特定のIPアドレスが特定のIPアドレスにアクセスできないようにするために行われます。この点を中心に説明します。
+
+NAT（Network Address Translation）は、ネットワーク通信におけるIPアドレス変換技術の一つです。NATは、プライベートIPアドレスとグローバルIPアドレスの間でIPアドレスを変換し、ネットワーク上のデバイスがインターネットにアクセスできるようにします。
+
+特定のIPアドレスが指定されたIPアドレスにアクセスできないようにするために、NATを使用することができます。例えば、特定のプライベートIPアドレス範囲からのトラフィックを特定のグローバルIPアドレスに変換せず、アクセスをブロックすることができます。
+
+このようなNATの設定は、ネットワークのセキュリティポリシーやアクセス制御リスト（ACL）などの制御措置の一部として使用されることがあります。特定のネットワークリソースへのアクセスを特定のユーザーやデバイスから制限するために、NATが利用されることがあります。
+        </div>
+     
+    <div class="slide fade">
+        <h2>・＜RT-local＞ </h2>
+        <font size="5">RT-localの役割は以下の通りです：<br>
+        ーー    ルーターにNATをデプロイし，ATを使用して変換を行うことは、特定のIPアドレスが特定のIPアドレスにアクセスできないようにするために行われます。この点を中心に説明します。
+
+NAT（Network Address Translation）は、ネットワーク通信におけるIPアドレス変換技術の一つです。NATは、プライベートIPアドレスとグローバルIPアドレスの間でIPアドレスを変換し、ネットワーク上のデバイスがインターネットにアクセスできるようにします。
+
+特定のIPアドレスが指定されたIPアドレスにアクセスできないようにするために、NATを使用することができます。例えば、特定のプライベートIPアドレス範囲からのトラフィックを特定のグローバルIPアドレスに変換せず、アクセスをブロックすることができます。
+
+このようなNATの設定は、ネットワークのセキュリティポリシーやアクセス制御リスト（ACL）などの制御措置の一部として使用されることがあります。特定のネットワークリソースへのアクセスを特定のユーザーやデバイスから制限するために、NATが利用されることがあります。
+    
+        <h2>・＜SW-local＞</h2>
+        <font size="5">SW-localの役割は以下の通りです：<br>
+           ーー    ルーターとパソコンまたは機器との間の通信に使用されます。<br>
+    </div>
+    <div class="slide fade">
+        <h1>・＜Server1＞</h1>
+        
+            <font size="5">Server1の役割は以下の通りです： <br>
+            ーー    Server1上には、HTTPD、Snort、Top、およびHAProxyが配置されています。
+
+1.HTTPD: HTTPDは、Apache HTTP Serverの一般的な略称であり、Webサーバーソフトウェアの一つです。HTTPDは、クライアントからのHTTPリクエストを受け取り、WebページやWebアプリケーションなどのコンテンツを提供します。Webサーバーとしての役割を果たします。<br>
+
+2.Snort: Snortは、オープンソースのネットワーク侵入検知システム（IDS）および侵入防止システム（IPS）です。Snortは、ネットワーク上のトラフィックを監視し、悪意のある行動や攻撃を検出してブロックすることができます。ネットワークセキュリティの向上に役立ちます。<br>
+
+3.Top: Topは、Linuxシステムで実行中のプロセスをリアルタイムで監視するためのユーティリティです。Topを使用すると、CPU、メモリ、およびその他のリソースの使用状況をリアルタイムで表示し、システムのパフォーマンスを監視および管理することができます。<br>
+
+4.HAProxy: HAProxyは、オープンソースのロードバランサーソフトウェアであり、高可用性および負荷分散のために使用されます。HAProxyは、複数のWebサーバーへのリクエストをバランスし、負荷を分散して、システムのパフォーマンスや信頼性を向上させる役割を果たします。<br>
+
+    </div>
+               <div class="slide fade">
+                   <h1>・＜Server2＞</h1>
+                    <font size="5">Server2の役割は以下の通りです： <br>
+                      ーー    Server2上には、HTTPD配置されています。<br>
+                      1.HTTPD: HTTPDは、Apache HTTP Serverの一般的な略称であり、Webサーバーソフトウェアの一つです。HTTPDは、クライアントからのHTTPリクエストを受け取り、WebページやWebアプリケーションなどのコンテンツを提供します。Webサーバーとしての役割を果たします。<br>
+              </div>
+ 
+  
+ </div>
+ </div>
+<script>
+    // モーダル表示処理
+    function openModal(img) {
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    // モーダル非表示処理
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
+<div id="endMessage" style="display: none;">移動不可</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="jo">
+<head>
+    <title>トポロジー</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        /* モーダルのスタイル */
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #modal img {
+            max-width: 80%; /* 画像の最大幅を調整 */
+            max-height: 80%; /* 画像の最大高さを調整 */
+            width: auto;
+            height: auto;
+        }
+        /* 画像ごとのスタイル調整 */
+
+        #memo {
+            max-width: 30%; /* 画像の最大幅を調整 */
+            max-height: 30%; /* 画像の最大高さを調整 */
+        }
+
+    </style>
+</head>
+<body>
+<nav style="background-color: #408080;">
+    <b><a href="#"class="a">サイバー攻撃対策有効性の検証</a></b>
+     <a href="index.html">メンバー紹介</a>
+    <a href="02.html">背景</a>
+    <a href="03.html">目的</a>
+    <a href="04.html">トポロジー</a>
+    <a href="05.html">構成</a>
+    <a href="06.html">設定と攻撃手順・認証</a>
+    <a href="07.html">対策認証</a>
+    <a href="08.html">まとめ</a>
+    <a href="09.html">参考文献</a>
+</nav>
+
+<div class="slideshow-container">
+    <div class="slide fade">
+        <h1> 構成図　</h1>
+        <font size="７"></font> 
+        <p></p>
+        <font size="5">Switch -CISCO Catalyst 2960-C Series LL</font>  <p></p>
+        <font size="5">PC1 -intel CORE i7 vPRO</font>  <p></p>
+        <font size="5">PC2 -intel CORE i7 vPRO</font>  <p></p>
+        <p></p>
+        <img id="ポロジー" src="../images/4.png" onclick="openModal(this)" style="max-width: 100%; max-height: 100%;">
+    　
+    
+          </div>
+    
+        
+<div id="modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="クリックで拡大">
+</div>
+
+<script>
+    // モーダル表示処理
+    function openModal(img) {
+        document.getElementById('modalImage').src = img.src;
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    // モーダル非表示処理
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+<div id="endMessage" style="display: none;">移動不可</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
+

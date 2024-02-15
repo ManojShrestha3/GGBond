@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>攻撃手順と認証</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+
+        .column{
+                float:left;
+                width: 30%;
+                padding: 5px;
+        }
+        .row::after{
+                content: "";
+                display: table;
+                clear: both;
+        }
+    </style>
+</head>
+<body>
+<nav style="background-color: #ac0056;">
+  <b><a href="#"class="a">サイバー攻撃対策有効性の検証</a></b>
+      <a href="index.html">メンバー紹介</a>
+    <a href="02.html">背景</a>
+    <a href="03.html">目的</a>
+    <a href="04.html">トポロジー</a>
+    <a href="05.html">構成</a>
+    <a href="06.html">設定と攻撃手順・認証</a>
+    <a href="07.html">対策認証</a>
+    <a href="08.html">まとめ</a>
+    <a href="09.html">参考文献</a>
+</nav>
+
+
+
+<div class="slideshow-container">
+    <div class="slide fade">
+<h1>Kali設定</h1>
+<font size="5">ーー KaliのIPアドレス</font> 
+<p></p>
+<p></p>
+        <img src="../images/1.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+    <div class="slide fade">
+<h1>RT-out設定</h1>
+<font size="5">ーー RT-outインターフェースのIPアドレス</font> 
+<p></p>
+<p></p>
+        <img src="../images/2.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>RT-local設定</h1>
+<font size="5">ーー  RT-localインターフェースのIPアドレス</font> 
+<p></p>
+<p></p>
+        <img src="../images/6.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+ <div class="slide fade">
+ 
+<h1>Server1設定</h1>
+<font size="5">ーーServer1のIPアドレス</font> 
+<p></p>
+<p></p>
+        <img src="../images/7.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+<div class="slide fade">
+        <h1>Server1設定</h1>
+        <font size="5">ーーServer1のsnort情報</font> 
+        <p></p>
+        <p></p>
+        <div class="row">
+                <div class="column">
+                    <img src ="../images/9.jpg" style="width:100%;">
+                </div>
+                <div class="column">
+                    <img src ="../images/10.jpg" style="width:100%;">
+                </div>
+                <div class="column">
+                    <img src ="../images/11.jpg" style="width:100%;">
+                </div>
+            </div>  
+    </div>
+
+    <div class="slide fade">
+<h1>Server1設定</h1>
+<font size="5">ーー Server1のロードバランス情報</font> 
+<p></p>
+<p></p>
+<div class="row">
+        <div class="column">
+            <img src ="../images/1.jpg" style="width:100%;">
+        </div>
+        <div class="column">
+            <img src ="../images/12.jpg" style="width:100%;">
+        </div>
+        <div class="column">
+            <img src ="../images/13.jpg" style="width:100%;">
+        </div>
+    </div>  
+          </div>
+
+    <div class="slide fade">
+<h1>Server1設定</h1>
+<font size="5">ーー 未攻撃Server1のTOP情報</font> 
+<p></p>
+<p></p>
+        <img src="../images/14.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+<div class="slide fade">
+<h1>Server1設定</h1>
+<font size="5">ーーServer1のHTTPD情報</font> 
+<p></p>
+<p></p>
+<div class="row">
+        <div class="column">
+            <img src ="../images/15.jpg" style="width:100%;">
+        </div>
+        <div class="column">
+            <img src ="../images/16.jpg" style="width:100%;">
+        </div>
+        <div class="column">
+            <img src ="../images/17.jpg" style="width:100%;">
+        </div>
+    </div>  
+</div>
+
+
+
+
+<div class="slide fade">
+  <h1>server2設定</h1>
+  <font size="5">server2のアドレス</font> 
+  <p></p>
+  <p></p>
+          <img src="../images/71.jpg" style="max-width: 50%; max-height: 50%;">
+            </div>
+  
+
+
+
+
+
+
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Server1にSnort起動</font> 
+<p></p>
+<p></p>
+        <img src="../images/18.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからNMAP TCPスキャン</font> 
+<p></p>
+<p></p>
+        <img src="../images/19.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーWiresharkでNMAP TCPスキャン状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/20.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/21.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからNMAP UDPスキャン</font> 
+<p></p>
+<p></p>
+        <img src="../images/22.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー WiresharkでNMAP  UDPスキャン状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/23.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/24.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Kaliからポート80へのアクセス</font> 
+<p></p>
+<p></p>
+        <img src="../images/25.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+    <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Kaliからポート80へのアクセス</font> 
+<p></p>
+<p></p>
+        <img src="../images/26.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーWiresharkでポート80へのアクセス状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/27.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/28.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからNMAP XMASスキャン</font> 
+<p></p>
+<p></p>
+        <img src="../images/29.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからNMAP XMASスキャン</font> 
+<p></p>
+<p></p>
+        <img src="../images/30.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーWiresharkでNMAP XMASスキャン状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/31.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/32.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+          
+              <div class="slide fade">
+<h1>攻撃順番</h1>
+<font size="5">ーー KaliからNMAP FINスキャン</font> 
+<p></p>
+<p></p>
+        <img src="../images/33.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー WiresharkでNMAP FINスキャン状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/34.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー  Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/35.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+          
+              <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからNetcat攻撃</font> 
+<p></p>
+<p></p>
+        <img src="../images/36.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー WiresharkでNetcat攻撃状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/37.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+
+<h1>攻撃手順</h1>
+<font size="5">ーー  Server1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/38.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからSQLインジェクション攻撃</font> 
+<p></p>
+<p></p>
+        <img src="../images/40.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー  WiresharkでSQLインジェクション攻撃状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/41.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーServer1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/42.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー HPing3攻撃前Server1のCPU使用率</font> 
+<p></p>
+<p></p>
+        <img src="../images/43.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー KaliからDDOS（Hping3）攻撃</font> 
+<p></p>
+<p></p>
+        <img src="../images/44.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーー  WiresharkでDDOS（Hping3）攻撃状態</font> 
+<p></p>
+<p></p>
+        <img src="../images/45.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーServer1にはSnort警告</font> 
+<p></p>
+<p></p>
+        <img src="../images/46.jpg" style="max-width: 50%; max-height: 50%;">
+          </div>
+ <div class="slide fade">
+<h1>攻撃手順</h1>
+<font size="5">ーーHPing3攻撃後Server1のCPU使用率</font> 
+<p></p>
+<p></p>
+        <img src="../images/47.jpg" style="max-width: 50%; max-height: 50%;">
+         
+
+</div>
+<div id="endMessage" style="display: none;">移動不可</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>カレンダー</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<nav style="background-color: #cc6600;">
+     <b><a href="#"class="a">サイバー攻撃対策有効性の検証</a></b>
+    <a href="index.html">メンバー紹介</a>
+    <a href="02.html">背景</a>
+    <a href="03.html">目的</a>
+    <a href="04.html">トポロジー</a>
+    <a href="05.html">構成</a>
+    <a href="06.html">攻撃手順と認証</a>
+    <a href="07.html">対策認証</a>
+    <a href="08.html">まとめ</a>
+    <a href="09.html">参考文献</a>
+</nav>
+
+
+
+<div class="slideshow-container">
+     <div class="slide fade">
+<h2>3-2. addEvent関数</h2>
+<font size="5">-- 特定の日付をクリックしたときに呼び出される関数です。 ユーザーはその日にイベントを追加できます。</font>
+<p></p>
+<font size="5">-- promptを使用して、ユーザーからイベント内容を入力してもらいます。</font>
+<p></p>
+<font size="5">-- 入力されたイベントをeventsオブジェクトに保存し、イベントがない場合はその日付のイベントを削除します。</font>
+<p></p>
+<font size="5">-- render Calendar関数を呼び出して、変更されたイベントを反映したカレンダーを再レンダリングします。</font>
+<p></p>
+           <img src="../images/01.png"/>
+     </div>
+
+     <div class="slide fade">
+<h2> 3-3. displayEvents関数 </h2>
+<font size="5"> -- 保存されたイベントをカレンダーに表示する関数です。</font>
+<p></p>
+<font size="5"> -- events オブジェクトに保存されているすべてのイベントを巡回します。</font>
+<p></p>
+<font size="5"> -- 現在のカレンダーに表示される日付と一致するイベントがある場合は、その日付にイベント内容を表示します。</font>
+<p></p>
+     <img src="../images/01.png"/>
+     </div>
+
+     <div class="slide fade">
+
+<h2> 3-4. prevMonth, nextMonth, goToday関数</h2>
+<font size="5"> -- これらの関数は、ユーザーがカレンダーから前月、翌月に移動するか、今日の日付に戻ることを可能にします。</font>
+<p></p>
+<font size="5"> prevMonthとnextMonthはdateオブジェクトの月を調整して、以前または来月に移動します。</font>
+<p></p>
+<font size="5"> -- goTodayは、dateオブジェクトを現在の日付と時刻にリセットします。</font>
+<p></p>
+<font size="5"> -- 各関数はrender Calendarを呼び出して、変更された日付に合わせてカレンダーを再レンダリングします。</font>
+<p></p>
+<img src="../images/z6.png"/>
+     </div>
+
+</div>
+<div id="endMessage" style="display: none;">移動不可</div>
+<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+nav {
+    background-color: #87ceeb;
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #7fffd4;
+}
+
+body {
+    background-image: url('../images/image999.jpg'); /* 배경 이미지 설정 */
+    background-size: cover; /* 전체 뷰포트를 커버 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+    background-position: center; /* 이미지를 중앙에 위치 */
+}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative; /* 상대 위치 설정 */
+  margin: auto;
+  overflow: hidden; /* 컨테이너 밖의 내용 숨김 */
+}
+
+
+.slide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute; /* 절대 위치 사용 */
+  top: 50%; /* 컨테이너의 중앙에 위치 */
+  width: auto;
+  padding: 16px;
+  margin-top: -22px; /* 화살표 크기에 맞게 조정 */
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0; /* 우측에 위치 */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0; /* 좌측에 위치 */
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+h1 {
+    font-size: 36px; /* 폰트 크기 36px로 설정 */
+    color: #333; /* 색상 설정 */
+}
+
+.content {
+    font-size: 24px; /* 폰트 크기 24px로 설정 */
+    color: #666; /* 색상 설정 */
+}
+
+
+
+.content-container {
+    position: relative;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px; /* 화살표 크기 설정 */
+    color: #333; /* 화살표 색상 설정 */
+    user-select: none;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+
+#startMessage {
+    position: fixed;
+    top: 20px; /* 상단에서 20px 떨어진 위치에 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+
+#endMessage {
+    position: fixed; /* 고정된 위치에 표시 */
+    bottom: 20px; /* 하단에서 20px 떨어진 위치에 표시 */
+    left: 50%; /* 화면 가운데에 표시 */
+    transform: translateX(-50%); /* 가운데 정렬을 위한 변환 */
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경 */
+    color: white; /* 글자 색상 */
+    padding: 10px; /* 내부 여백 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+.a{
+  font-size: 20px;
+  
+}
+
+
+

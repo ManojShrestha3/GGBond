@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>対策認証</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<nav style="background-color: #87200e;">
+    <b><a href="#"class="a">サイバー攻撃対策有効性の検証</a></b>
+         <a href="index.html">メンバー紹介</a>
+    <a href="02.html">背景</a>
+    <a href="03.html">目的</a>
+    <a href="04.html">トポロジー</a>
+    <a href="05.html">構成</a>
+    <a href="06.html">設定と攻撃手順・認証</a>
+    <a href="07.html">対策認証</a>
+    <a href="08.html">まとめ</a>
+    <a href="09.html">参考文献</a>
+</nav>
+
+    
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">server1ロードバランス起動と状態</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/50.jpg" style="max-width: 50%; max-height: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">kaliからserver1のWEBへアクセス、Server２のWEBを見えるのはロードバランスの作用</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/51.jpg" style="max-height: 50%; max-width:50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">Wiresharkで　kaliからserver1のWEBへアクセスデータを見える</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/52.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">Serverの方のルータ　NAT設定状態</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/53.jpg" style="max-height: 50%; max-width:50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">kaliの方のルータNAT設定状態</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/54.jpg" style="max-height:50%; max-width:50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">NAT全部配置して、kaliからServer１へPINGすうると　できないということ</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/55.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">WiresharkでPINGデータをみえる</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/56.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">対策の方法全部設定して、kaliからもう一回攻撃をすると　HPING３　PINGできないということ　Wiresharkでデータを参考する</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/57.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">NMAP</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/58.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div class="slide fade">
+        <h1>攻撃対策</h1>
+        <font size="5">Server１にはkaliからSnort警告がなくなった</font> 
+        <p></p>
+        <p></p>
+        <img src="../images/59.jpg" style="max-height: 50%; max-width: 50%;">
+    </div>
+    <div id="endMessage" style="display: none;">移動不可</div>
+<script src="../js/script.js"></script>
+</body>
+</html>
